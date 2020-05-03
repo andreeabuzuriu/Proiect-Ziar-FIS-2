@@ -1,9 +1,7 @@
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -11,6 +9,8 @@ import javafx.stage.Stage;
 
 public class Login extends Application {
 
+    TextField usernameTextField = new TextField ();
+    PasswordField passwordTextField = new PasswordField ();
     public static void main(String[] args){
         launch(args);
     }
@@ -21,8 +21,7 @@ public class Login extends Application {
         Label usernameLabel = new Label("Username:");
         Label passwordLabel = new Label("Password:");
         Button loginButton = new Button("Login");
-        TextField usernameTextField = new TextField ();
-        TextField passwordTextField = new TextField ();
+
 
         HBox usernameBox = new HBox();
         HBox passwordBox = new HBox();
@@ -44,7 +43,12 @@ public class Login extends Application {
         Scene scene = new Scene(layout,300,250);
         primaryStage.setScene(scene);
         primaryStage.show();
+        loginButton.setOnAction(e->loginAction());
 
+    }
+
+    public void loginAction(){
+        System.out.println(passwordTextField.getText()+ " " + usernameTextField.getText());
     }
 
 
