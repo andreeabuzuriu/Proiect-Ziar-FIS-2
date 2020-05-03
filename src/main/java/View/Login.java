@@ -2,6 +2,8 @@ package View;
 
 import Models.UserModel;
 import Models.UserType;
+import Utils.UserUtils;
+import Utils.UsersGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -25,6 +27,8 @@ public class Login extends Application {
     PasswordField passwordTextField = new PasswordField ();
     public static void main(String[] args){
         launch(args);
+        UsersGenerator.generateUsersList();
+
     }
     public void start(Stage primaryStage) throws Exception{
 
@@ -33,7 +37,6 @@ public class Login extends Application {
         Label usernameLabel = new Label("Username:");
         Label passwordLabel = new Label("Password:");
         Button loginButton = new Button("Login");
-
 
         HBox usernameBox = new HBox();
         HBox passwordBox = new HBox();
@@ -60,18 +63,12 @@ public class Login extends Application {
     }
 
     public void loginAction(){
-        System.out.println(passwordTextField.getText()+ " " + usernameTextField.getText());
-
-
-
-            /*
-            Gson gson = new Gson(); // Or use new GsonBuilder().create();
-            String json = gson.toJson(new UserModel("abc","def", UserType.REDACTOR));
-            System.out.println(json);
-
-            UserModel target2 = gson.fromJson(json, UserModel.class); // des
-            System.out.println(target2.username + " " + target2.password + " "+ target2.role);
-            */
+        UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
+        if(userType!=null) {
+            System.out.println("User exists");
+            //TODO abc
+        }
+        else AlertBox.display("Eroare","Username sau parola gresita");
 
     }
 
