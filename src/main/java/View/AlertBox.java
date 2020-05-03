@@ -31,10 +31,4 @@ public class AlertBox {
         window.showAndWait();
     }
 
-    /*
-    public void handle(ActionEvent event) {
-        if(event.getSource()==closeButton)
-            window.close();
-    }
-    */
 }
