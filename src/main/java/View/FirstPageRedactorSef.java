@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class FirstPageRedactorSef {
 
     private static HBox CurrentLayout;
-    private static VBox pendingView, articlesView;
+    private static VBox pendingView,pendingContentView,articlesView;
     private static ArrayList<ArticleModel> pendingArticles = new ArrayList<>();
     private static ArrayList<ArticleModel> acceptedArticles = new ArrayList<>();
 
@@ -43,13 +43,19 @@ public class FirstPageRedactorSef {
         //TODO initiez listele cu articole
         pendingArticles.addAll(MockArticles.pendingArticles);
 
-
         //setPending List
-        ScrollPane pendingScroll;
         pendingView = new VBox();
+        pendingContentView=new VBox();
+
+        ScrollPane pendingScroll;
         pendingScroll = new ScrollPane();
         pendingScroll.setContent(pendingView);
         pendingScroll.setFitToWidth(true);
+
+        Label pendingTitleView = new Label("All articles list ");
+        pendingTitleView.setAlignment(Pos.CENTER);
+
+        pendingView.getChildren().addAll(pendingTitleView,pendingContentView);
 
         createPendingList();
 
@@ -65,17 +71,13 @@ public class FirstPageRedactorSef {
     }
 
     private static void createPendingList() {
-        pendingView.getChildren().clear();
+        pendingContentView.getChildren().clear();
 
-        Label pendingViewTitle = new Label("Articles in pending ");
-        pendingViewTitle.setAlignment(Pos.CENTER);
-
-        pendingView.getChildren().add(pendingViewTitle);
-        pendingView.setPrefWidth(500);
+        pendingContentView.setPrefWidth(500);
         pendingView.setSpacing(10);
 
         for (int i=0;i<pendingArticles.size();i++){
-            pendingView.getChildren().add(createPendingCell(pendingArticles.get(i)));
+            pendingContentView.getChildren().add(createPendingCell(pendingArticles.get(i)));
         }
     }
 

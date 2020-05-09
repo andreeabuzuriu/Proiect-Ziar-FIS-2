@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdacdac0-ecd1-4b7a-996f-a9adf4442bcc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MockData/MockArticles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/ArticleModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/ArticleState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+            <state relative-caret-position="191">
+              <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,30 +27,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="77" column="85" lean-forward="true" selection-start-line="77" selection-start-column="85" selection-end-line="77" selection-end-column="85" />
+            <state relative-caret-position="981">
+              <caret line="75" column="45" lean-forward="true" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-              <folding>
-                <element signature="e#320#321#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#522#523#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,91 +44,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
               <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/ArticleModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding>
-                <element signature="e#466#467#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
-                <element signature="e#854#855#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
-                <element signature="e#1058#1059#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1168#1169#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/ArticleState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/View/AlertBox.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UsersGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UserUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,9 +93,9 @@
         <option value="$PROJECT_DIR$/src/main/java/View/AlertBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/ArticleState.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/ArticleModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" />
         <option value="$PROJECT_DIR$/src/main/java/MockData/MockArticles.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" />
       </list>
     </option>
   </component>
@@ -324,7 +218,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589025187631" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589027027164" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../proiectfisziar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -441,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588523158229</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created Pending List with fake data ZIAR-23">
+      <created>1589025270916</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589025270917</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -457,7 +358,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16764276" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16764276" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -466,7 +367,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49853587" visible="true" weight="0.31639344" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49853587" visible="true" weight="0.31639344" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -533,7 +434,8 @@
     <MESSAGE value="Am generat userii" />
     <MESSAGE value="Implemented login logic" />
     <MESSAGE value="Implemented login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented login" />
+    <MESSAGE value="Created Pending List with fake data ZIAR-23" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Pending List with fake data ZIAR-23" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -670,16 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="77" column="85" lean-forward="true" selection-start-line="77" selection-start-column="85" selection-end-line="77" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MockData/MockArticles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -692,8 +584,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+        <state relative-caret-position="191">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="981">
+          <caret line="75" column="45" lean-forward="true" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
