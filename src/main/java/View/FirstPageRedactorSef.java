@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class FirstPageRedactorSef {
 
     private static HBox CurrentLayout;
-    private static VBox pendingView,pendingContentView,articlesView;
+    private static VBox pendingView,pendingContentView,articlesView,acceptedContentView;
     private static ArrayList<ArticleModel> pendingArticles = new ArrayList<>();
     private static ArrayList<ArticleModel> acceptedArticles = new ArrayList<>();
 
@@ -42,10 +42,14 @@ public class FirstPageRedactorSef {
 
         //TODO initiez listele cu articole
         pendingArticles.addAll(MockArticles.pendingArticles);
+        acceptedArticles.addAll(MockArticles.acceptedArticles);
 
         //setPending List
         pendingView = new VBox();
+        pendingView.setSpacing(10);
+
         pendingContentView=new VBox();
+        pendingContentView.setPrefWidth(500);
 
         ScrollPane pendingScroll;
         pendingScroll = new ScrollPane();
@@ -60,26 +64,74 @@ public class FirstPageRedactorSef {
         createPendingList();
 
         //set Articles view
-        Label articlesViewTitle = new Label("All articles list ");
-        articlesViewTitle.setAlignment(Pos.CENTER);
         articlesView = new VBox();
-        articlesView.setPrefWidth(500);
-        articlesView.getChildren().add(articlesViewTitle);
+        articlesView.setSpacing(10);
 
-        CurrentLayout.getChildren().addAll(pendingScroll, articlesView);
+        acceptedContentView=new VBox();
+        acceptedContentView.setPrefWidth(500);
+
+        ScrollPane articlesScroll;
+        articlesScroll = new ScrollPane();
+        articlesScroll.setContent(articlesView);
+        articlesScroll.setFitToWidth(true);
+
+        Label articlesViewTitle = new Label("Accepted articles list");
+        articlesViewTitle.setAlignment(Pos.CENTER);
+
+        articlesView.getChildren().addAll(articlesViewTitle,acceptedContentView);
+
+        createAcceptedList();
+
+        CurrentLayout.getChildren().addAll(pendingScroll, articlesScroll);
 
     }
 
     private static void createPendingList() {
         pendingContentView.getChildren().clear();
 
-        pendingContentView.setPrefWidth(500);
-        pendingView.setSpacing(10);
 
         for (int i=0;i<pendingArticles.size();i++){
             pendingContentView.getChildren().add(createPendingCell(pendingArticles.get(i)));
         }
     }
+
+    private static void createAcceptedList(){
+        acceptedContentView.getChildren().clear();
+
+        for (int i=0;i<acceptedArticles.size();i++){
+            acceptedContentView.getChildren().add(createAcceptedCell(acceptedArticles.get(i)));
+        }
+    }
+
+
+    private static VBox createAcceptedCell(ArticleModel article){
+        String cssLayout = "-fx-border-color: black;\n" +
+                "-fx-border-insets: 5;\n" +
+                "-fx-border-width: 3;\n";
+
+        VBox cellParent = new VBox();
+        cellParent.setPadding(new Insets(10, 10, 10, 10));
+        cellParent.setStyle(cssLayout);
+        cellParent.setSpacing(20);
+
+        VBox detailBox = new VBox();
+        detailBox.setPrefWidth(500);
+        detailBox.setSpacing(5);
+
+        Label titleLabel = new Label(article.getAutor() + ":" + article.getNume());
+        Label descLabel = new Label(article.getContinut());
+
+        descLabel.setWrapText(true);
+        descLabel.setPrefWidth(500);
+        descLabel.setTextAlignment(TextAlignment.JUSTIFY);
+        detailBox.getChildren().addAll(titleLabel, descLabel);
+
+        cellParent.getChildren().add(detailBox);
+
+        return cellParent;
+    }
+
+
 
     private static VBox createPendingCell(ArticleModel article) {
         String cssLayout = "-fx-border-color: black;\n" +
