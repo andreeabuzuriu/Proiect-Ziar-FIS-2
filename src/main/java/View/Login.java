@@ -58,17 +58,23 @@ public class Login extends Application {
         Scene scene = new Scene(layout,300,250);
         primaryStage.setScene(scene);
         primaryStage.show();
-        loginButton.setOnAction(e->loginAction());
+
+        loginButton.setOnAction(e->
+        {loginAction();
+        primaryStage.close();
+        });
 
     }
 
     public void loginAction(){
-        UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
-        if(userType!=null) {
-            System.out.println("User exists");
-            //TODO abc
+        FirstPageRedactorSef.display(usernameTextField.getText());
+
+      /*  UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
+        if (userType.equals(UserType.REDACTOR_SEF)) {
+            FirstPageRedactorSef.display(usernameTextField.getText());
         }
-        else AlertBox.display("Eroare","Username sau parola gresita");
+        //TODO FirstPageRedactor
+        else AlertBox.display("Eroare","Username sau parola gresita");*/
 
     }
 
