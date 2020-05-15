@@ -20,7 +20,8 @@ public class UserUtils {
     public static UserType isUserValid(String username, String password) {
         ArrayList<UserModel> usersList = readUsersFile();
         for(int i=0;i<usersList.size();i++){
-            if((usersList.get(i).getUsername().equals(username)) && (usersList.get(i).getPassword().equals(password)))
+            String cryptedPassword=EncryptUtil.decrypt(usersList.get(i).getPassword());
+            if((usersList.get(i).getUsername().equals(username)) && cryptedPassword.equals(password))
                 return usersList.get(i).getRole();
         }
         return null;
