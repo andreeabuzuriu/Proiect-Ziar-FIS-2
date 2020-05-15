@@ -17,9 +17,16 @@ import java.util.ArrayList;
 public class UsersGenerator {
     public static void generateUsersList() {
         ArrayList<UserModel> users = new ArrayList<UserModel>(3);
-        UserModel u1 = new UserModel("adi", "parola", UserType.REDACTOR);
-        UserModel u2 = new UserModel("bogdan", "parola123", UserType.REDACTOR_SEF);
-        UserModel u3 = new UserModel("cristi", "123456", UserType.REDACTOR);
+        String user1Pass="parola";
+        String user1PassEncrypted=EncryptUtil.encrypt(user1Pass);
+        String user2Pass="parola123";
+        String user2PassEncrypted=EncryptUtil.encrypt(user2Pass);
+        String user3Pass="123456";
+        String user3PassEncrypted=EncryptUtil.encrypt(user3Pass);
+
+        UserModel u1 = new UserModel("adi", user1PassEncrypted, UserType.REDACTOR);
+        UserModel u2 = new UserModel("bogdan", user2PassEncrypted, UserType.REDACTOR_SEF);
+        UserModel u3 = new UserModel("cristi", user3PassEncrypted, UserType.REDACTOR);
         users.add(u1);
         users.add(u2);
         users.add(u3);
