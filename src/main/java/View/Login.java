@@ -67,8 +67,8 @@ public class Login extends Application {
     }
 
     public void loginAction(){
-        FirstPageRedactorSef.display(usernameTextField.getText());
-
+        //FirstPageRedactorSef.display(usernameTextField.getText());
+        FirstPageRedactor.display(usernameTextField.getText());
       /*  UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
         if (userType.equals(UserType.REDACTOR_SEF)) {
             FirstPageRedactorSef.display(usernameTextField.getText());
