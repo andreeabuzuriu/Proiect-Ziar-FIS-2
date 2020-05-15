@@ -67,15 +67,18 @@ public class Login extends Application {
     }
 
     public void loginAction(){
-        //FirstPageRedactorSef.display(usernameTextField.getText());
-        FirstPageRedactor.display(usernameTextField.getText());
-      /*  UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
-        if (userType.equals(UserType.REDACTOR_SEF)) {
+
+        UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
+
+        if(userType==null)
+            AlertBox.display("Eroare","Username sau parola gresita");
+        else
+        if(userType.equals(UserType.REDACTOR_SEF)){
             FirstPageRedactorSef.display(usernameTextField.getText());
         }
-        //TODO FirstPageRedactor
-        else AlertBox.display("Eroare","Username sau parola gresita");*/
-
+        else if(userType.equals(UserType.REDACTOR)){
+            FirstPageRedactor.display(usernameTextField.getText());
+        }
     }
 
 

@@ -6,33 +6,38 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-
 
 import java.util.ArrayList;
 
 public class FirstPageRedactor {
-    private static VBox CurrentLayout, myArticleView, myContentView;
-    private static ArrayList <ArticleModel> myArticles = new ArrayList <> ();
+    private static VBox CurrentLayout;
+    private static VBox myArticleView, myContentView;
+    private static ArrayList<ArticleModel> myArticles = new ArrayList<>();
+    private static String CurrentUserName;
 
     static void display(String username) {
 
         Stage window = new Stage();
         window.setTitle("Pagina principala REDACTOR " + username);
-        //Button addButton = new Button("Adauga articol!");
         CurrentLayout = new VBox();
         Scene scene = new Scene(CurrentLayout, 500, 700);
         window.setScene(scene);
-
         window.show();
+
+        CurrentUserName=username;
 
         onCreate();
     }
+
     private static void onCreate() {
         //TODO initiez listele cu articole
         myArticles.addAll(MockArticles.pendingArticles);
@@ -51,6 +56,7 @@ public class FirstPageRedactor {
 
         Button addButton = new Button("Add");
         addButton.setAlignment(Pos.CENTER);
+        addButton.setOnAction(e-> AddNewArticleView.display(CurrentUserName));
 
         Label articleViewTitle = new Label("My articles list");
         articleViewTitle.setAlignment(Pos.CENTER);
@@ -61,7 +67,9 @@ public class FirstPageRedactor {
         myArticleView.getChildren().addAll(articleViewTitle, myContentView);
         createMyArticlesList();
         CurrentLayout.getChildren().addAll(addButton,myScroll);
+
     }
+
     private static void createMyArticlesList() {
         myContentView.getChildren().clear();
         for (int i = 0; i< myArticles.size(); i++){
