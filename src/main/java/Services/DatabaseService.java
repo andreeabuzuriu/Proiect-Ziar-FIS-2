@@ -47,4 +47,26 @@ public class DatabaseService {
             return null;
         }
     }
+
+    public static ArrayList<ArticleModel> getUserArticles(String userName){
+        Gson gson = new Gson();
+        ArrayList<ArticleModel> userArticles= new ArrayList<>();
+        try{
+            FileReader reader = new FileReader(articlesFile);
+            ArrayList<ArticleModel> allArticles = gson.fromJson(reader,new TypeToken<ArrayList<ArticleModel>>() {}.getType());
+            for(int i=0;i<allArticles.size();i++)
+            {
+                if(allArticles.get(i).getAutor().equals(userName))
+                {
+                    userArticles.add(allArticles.get(i));
+                }
+            }
+            return userArticles;
+        }
+        catch (Exception e)
+        {
+            return null;
+        }
+    }
+
 }

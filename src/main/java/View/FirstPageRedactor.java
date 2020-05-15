@@ -2,6 +2,8 @@ package View;
 
 import MockData.MockArticles;
 import Models.ArticleModel;
+import Models.ArticleState;
+import Services.DatabaseService;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -40,7 +42,7 @@ public class FirstPageRedactor {
 
     private static void onCreate() {
         //TODO initiez listele cu articole
-        myArticles.addAll(MockArticles.pendingArticles);
+        myArticles.addAll(DatabaseService.getUserArticles(CurrentUserName));
 
         //setPending List
         myArticleView = new VBox();
@@ -94,10 +96,21 @@ public class FirstPageRedactor {
         Label titleLabel = new Label(article.getAutor() + ":" + article.getNume());
         Label descLabel = new Label(article.getContinut());
 
+        String state="Pending";
+        if(article.getArticleState().equals(ArticleState.ACCEPTED))
+        {
+            state="Accepted";
+        }
+        if(article.getArticleState().equals(ArticleState.DECLINED))
+        {
+            state="Declined";
+        }
+        Label articleStateLabel=new Label("Article state : "+state);
+
         descLabel.setWrapText(true);
         descLabel.setPrefWidth(500);
         descLabel.setTextAlignment(TextAlignment.JUSTIFY);
-        detailBox.getChildren().addAll(titleLabel, descLabel);
+        detailBox.getChildren().addAll(articleStateLabel,titleLabel, descLabel);
 
         HBox actionBox = new HBox();
         actionBox.minWidth(60);
