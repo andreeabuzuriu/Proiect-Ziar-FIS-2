@@ -92,5 +92,27 @@ public class DatabaseService {
         }
 
     }
+    public static void deleteArticle(ArticleModel articleToDelete){
+        ArrayList<ArticleModel> allArticles=getAllArticles();
+        for(int i=0;i<allArticles.size();i++)
+        {
+            if(allArticles.get(i).getKey().equals(articleToDelete.getKey()))
+            {
+                allArticles.remove(i);
+            }
+        }
+
+        try{
+            FileWriter file = new FileWriter(articlesFile);
+            String allArticlesJson=new Gson().toJson(allArticles);
+            file.write(allArticlesJson);
+            file.flush();
+            AlertBox.display("Notificare","Articolul cu numele "+articleToDelete.getNume() + " a fost sters!");
+        }
+        catch (Exception e)
+        {
+            System.out.println("Delete failed");
+        }
+    }
 
 }
