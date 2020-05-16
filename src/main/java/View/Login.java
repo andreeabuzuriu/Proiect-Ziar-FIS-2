@@ -2,7 +2,6 @@ package View;
 
 import Models.UserModel;
 import Models.UserType;
-import Utils.EncryptUtil;
 import Utils.UserUtils;
 import Utils.UsersGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -62,24 +61,24 @@ public class Login extends Application {
 
         loginButton.setOnAction(e->
         {loginAction();
-
+        primaryStage.close();
         });
 
     }
 
     public void loginAction(){
-       // FirstPageRedactorSef.display(usernameTextField.getText());
 
         UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
-        if(userType==null){AlertBox.display("Eroare","Username sau parola gresita");
-        return;}
-        if (userType.equals(UserType.REDACTOR_SEF)) {
+
+        if(userType==null)
+            AlertBox.display("Eroare","Username sau parola gresita");
+        else
+        if(userType.equals(UserType.REDACTOR_SEF)){
             FirstPageRedactorSef.display(usernameTextField.getText());
         }
         else if(userType.equals(UserType.REDACTOR)){
-            //TODO FirstPageRedactor
+            FirstPageRedactor.display(usernameTextField.getText());
         }
-
     }
 
 
