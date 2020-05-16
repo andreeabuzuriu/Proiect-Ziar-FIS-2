@@ -131,19 +131,25 @@ public class FirstPageRedactor {
         actionBox.minWidth(60);
         actionBox.setSpacing(5);
 
-        Button acceptButton = new Button("Edit");
-        Button declineButton = new Button("Delete");
+        Button editButton = new Button("Edit");
+        Button deleteButton = new Button("Delete");
 
-        acceptButton.setOnAction(e ->
+        editButton.setOnAction(e ->
         {
-            System.out.println(article.getNume() + " edited");
+            if(article.getArticleState()==ArticleState.ACCEPTED)      //daca articolul a fost deja acceptat, nu se admin modificari
+            {
+                AlertBox.display("Warning","Articolul a fost deja publicat!");
+            }
+            else {
+                EditArticleView.display(article);
+            }
         });
-        declineButton.setOnAction(e ->
+        deleteButton.setOnAction(e ->
         {
             System.out.println(article.getNume() + " deleted");
         });
 
-        actionBox.getChildren().addAll(acceptButton, declineButton);
+        actionBox.getChildren().addAll(editButton, deleteButton);
         actionBox.setAlignment(Pos.CENTER);
 
         cellParent.getChildren().addAll(detailBox, actionBox);
