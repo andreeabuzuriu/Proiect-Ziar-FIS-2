@@ -2,6 +2,7 @@ package Services;
 
 import Models.ArticleModel;
 import Models.UserModel;
+import View.AlertBox;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -68,5 +69,6 @@ public class DatabaseService {
             return null;
         }
     }
+    public static void editArticle(ArticleModel newArticle){}
 
 }
