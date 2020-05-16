@@ -136,7 +136,13 @@ public class FirstPageRedactor {
 
         editButton.setOnAction(e ->
         {
-            System.out.println(article.getNume() + " edit");
+            if(article.getArticleState()==ArticleState.ACCEPTED)      //daca articolul a fost deja acceptat, nu se admin modificari
+            {
+                AlertBox.display("Warning","Articolul a fost deja publicat!");
+            }
+            else {
+                EditArticleView.display(article);
+            }
         });
         deleteButton.setOnAction(e ->
         {
