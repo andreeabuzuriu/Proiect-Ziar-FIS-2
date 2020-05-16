@@ -69,6 +69,28 @@ public class DatabaseService {
             return null;
         }
     }
-    public static void editArticle(ArticleModel newArticle){}
+    public static void editArticle(ArticleModel newArticle){
+        ArrayList<ArticleModel> allArticles=getAllArticles();
+        for(int i=0;i<allArticles.size();i++)
+        {
+            if(allArticles.get(i).getKey().equals(newArticle.getKey()))
+            {
+                allArticles.get(i).setNume(newArticle.getNume());
+                allArticles.get(i).setContinut(newArticle.getContinut());
+            }
+        }
+        try{
+            FileWriter file = new FileWriter(articlesFile);
+            String allArticlesJson=new Gson().toJson(allArticles);
+            file.write(allArticlesJson);
+            file.flush();
+            AlertBox.display("Notificare","Articolul cu numele "+newArticle.getNume() + " a fost editat!");
+        }
+        catch (Exception e)
+        {
+            System.out.println("Edit failed");
+        }
+
+    }
 
 }
