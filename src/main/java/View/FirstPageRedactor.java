@@ -57,6 +57,14 @@ public class FirstPageRedactor {
         myScroll.setFitToWidth(true);
 
         Button addButton = new Button("Add");
+        Button refreshButton = new Button("Refresh");
+
+        refreshButton.setOnAction(e->
+        {
+            refreshList();
+        });
+        HBox buttonsHBox = new HBox();
+        buttonsHBox.getChildren().addAll(addButton,refreshButton);
         addButton.setAlignment(Pos.CENTER);
         addButton.setOnAction(e-> AddNewArticleView.display(CurrentUserName));
 
@@ -68,8 +76,15 @@ public class FirstPageRedactor {
 
         myArticleView.getChildren().addAll(articleViewTitle, myContentView);
         createMyArticlesList();
-        CurrentLayout.getChildren().addAll(addButton,myScroll);
+        buttonsHBox.setAlignment(Pos.CENTER);
+        CurrentLayout.getChildren().addAll(buttonsHBox,myScroll);
 
+    }
+    private static void refreshList(){
+        myContentView.getChildren().clear();
+        myArticles.clear();
+        myArticles.addAll(DatabaseService.getUserArticles(CurrentUserName));
+        createMyArticlesList();
     }
 
     private static void createMyArticlesList() {
