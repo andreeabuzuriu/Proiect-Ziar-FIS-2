@@ -146,7 +146,15 @@ public class FirstPageRedactor {
         });
         deleteButton.setOnAction(e ->
         {
-            System.out.println(article.getNume() + " deleted");
+            if(article.getArticleState()==ArticleState.ACCEPTED)      //daca articolul a fost deja acceptat, nu se admin modificari
+            {
+                AlertBox.display("Warning","Articolul a fost deja publicat!");
+            }
+            else {
+                DatabaseService.deleteArticle(article);
+                refreshList();
+
+            }
         });
 
         actionBox.getChildren().addAll(editButton, deleteButton);
