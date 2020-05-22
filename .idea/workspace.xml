@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdacdac0-ecd1-4b7a-996f-a9adf4442bcc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
@@ -19,6 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Services/DatabaseService.java">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="378">
               <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
               <folding>
@@ -29,6 +31,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UserUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -68,6 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/EditArticleView.java">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="412">
               <caret line="58" column="56" lean-forward="true" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
               <folding>
@@ -89,6 +93,7 @@
           </provider>
         </entry>
       </file>
+
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Models/ArticleState.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -753,7 +758,12 @@
         <state relative-caret-position="221">
           <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -815,7 +825,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UsersGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MockData/MockArticles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
