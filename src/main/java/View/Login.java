@@ -2,6 +2,7 @@ package View;
 
 import Models.UserModel;
 import Models.UserType;
+import Utils.EncryptUtil;
 import Utils.UserUtils;
 import Utils.UsersGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -61,13 +62,12 @@ public class Login extends Application {
 
         loginButton.setOnAction(e->
         {loginAction();
-        primaryStage.close();
+
         });
 
     }
 
     public void loginAction(){
-
         UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
 
         if(userType==null)
@@ -79,6 +79,7 @@ public class Login extends Application {
         else if(userType.equals(UserType.REDACTOR)){
             FirstPageRedactor.display(usernameTextField.getText());
         }
+
     }
 
 
