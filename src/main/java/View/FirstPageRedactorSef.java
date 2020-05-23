@@ -16,6 +16,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 
 
@@ -26,18 +27,6 @@ public class FirstPageRedactorSef {
     private static ArrayList<ArticleModel> pendingArticles = new ArrayList<>();
     private static ArrayList<ArticleModel> acceptedArticles = new ArrayList<>();
     private static ArrayList<ArticleModel> allArticles = new ArrayList<>();
-
-    static void display(String username) {
-
-        Stage window = new Stage();
-        window.setTitle("Pagina principala REDACTOR SEF " + username);
-        CurrentLayout = new HBox();
-        Scene scene = new Scene(CurrentLayout, 1000, 600);
-        window.setScene(scene);
-        window.show();
-
-        onCreate();
-    }
 
     private static void refreshPendingList(){
         allArticles = DatabaseService.getAllArticles();
@@ -60,6 +49,39 @@ public class FirstPageRedactorSef {
     }
 
 
+    private static void refreshAcceptedList(){
+        allArticles = DatabaseService.getAllArticles();
+        acceptedContentView.getChildren().clear();
+        acceptedArticles.clear();
+
+        for (int i=0;i<allArticles.size();i++){
+            if(allArticles.get(i).getArticleState()==ArticleState.ACCEPTED) {
+                acceptedArticles.add(allArticles.get(i));
+            }
+        }
+        createAcceptedArticlesList();
+    }
+
+    private static void createAcceptedArticlesList() {
+        acceptedContentView.getChildren().clear();
+        for (int i = 0; i< acceptedArticles.size(); i++){
+            acceptedContentView.getChildren().add(createAcceptedCell(acceptedArticles.get(i)));
+        }
+    }
+
+
+    static void display(String username) {
+
+        Stage window = new Stage();
+        window.setTitle("Pagina principala REDACTOR SEF " + username);
+        CurrentLayout = new HBox();
+        Scene scene = new Scene(CurrentLayout, 1000, 600);
+        window.setScene(scene);
+        window.show();
+
+        onCreate();
+    }
+
     private static void onCreate() {
 
         //TODO initiez listele cu articole
@@ -72,6 +94,7 @@ public class FirstPageRedactorSef {
                 acceptedArticles.add(allArticles.get(i));
             }
         }
+
 
         //setPending List
         pendingView = new VBox();
@@ -122,6 +145,7 @@ public class FirstPageRedactorSef {
         for (int i=0;i<pendingArticles.size();i++){
             pendingContentView.getChildren().add(createPendingCell(pendingArticles.get(i)));
         }
+        refreshPendingList();
     }
 
     private static void createAcceptedList(){
@@ -193,15 +217,23 @@ public class FirstPageRedactorSef {
 
         acceptButton.setOnAction(e ->
         {
+            //System.out.println(article.getNume());
             DatabaseService.changeArticleState(article,ArticleState.ACCEPTED);
             AlertBox.display("Notificare","Articolul "+ article.getNume() +" a fost acceptat!");
             refreshPendingList();
+            refreshAcceptedList();
 
         });
         declineButton.setOnAction(e ->
         {
             //System.out.println(article.getNume() + " decline");
-            DatabaseService.changeArticleState(article,ArticleState.DECLINED);
+
+
+            DatabaseService.changeArticleState(article, ArticleState.DECLINED);
+            refreshPendingList();
+
+
+
         });
 
         actionBox.getChildren().addAll(acceptButton, declineButton);
@@ -211,4 +243,5 @@ public class FirstPageRedactorSef {
 
         return cellParent;
     }
+
 }
