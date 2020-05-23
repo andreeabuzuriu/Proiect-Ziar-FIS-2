@@ -39,6 +39,27 @@ public class FirstPageRedactorSef {
         onCreate();
     }
 
+    private static void refreshPendingList(){
+        allArticles = DatabaseService.getAllArticles();
+        pendingContentView.getChildren().clear();
+        pendingArticles.clear();
+
+        for (int i=0;i<allArticles.size();i++){
+            if(allArticles.get(i).getArticleState()==ArticleState.PENDING) {
+                pendingArticles.add(allArticles.get(i));
+            }
+        }
+        createPendingArticlesList();
+    }
+
+    private static void createPendingArticlesList() {
+        pendingContentView.getChildren().clear();
+        for (int i = 0; i< pendingArticles.size(); i++){
+            pendingContentView.getChildren().add(createPendingCell(pendingArticles.get(i)));
+        }
+    }
+
+
     private static void onCreate() {
 
         //TODO initiez listele cu articole
@@ -172,8 +193,9 @@ public class FirstPageRedactorSef {
 
         acceptButton.setOnAction(e ->
         {
-            //System.out.println(article.getNume());
             DatabaseService.changeArticleState(article,ArticleState.ACCEPTED);
+            AlertBox.display("Notificare","Articolul "+ article.getNume() +" a fost acceptat!");
+            refreshPendingList();
 
         });
         declineButton.setOnAction(e ->
