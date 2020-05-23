@@ -3,6 +3,7 @@ package View;
 import MockData.MockArticles;
 import Models.ArticleModel;
 import Models.ArticleState;
+import Services.DatabaseService;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -24,7 +25,7 @@ public class FirstPageRedactorSef {
     private static VBox pendingView,pendingContentView,articlesView,acceptedContentView;
     private static ArrayList<ArticleModel> pendingArticles = new ArrayList<>();
     private static ArrayList<ArticleModel> acceptedArticles = new ArrayList<>();
-
+    private static ArrayList<ArticleModel> allArticles = new ArrayList<>();
 
     static void display(String username) {
 
@@ -41,8 +42,15 @@ public class FirstPageRedactorSef {
     private static void onCreate() {
 
         //TODO initiez listele cu articole
-        pendingArticles.addAll(MockArticles.pendingArticles);
-        acceptedArticles.addAll(MockArticles.acceptedArticles);
+        allArticles = DatabaseService.getAllArticles();
+        for (int i=0;i<allArticles.size();i++){
+            if(allArticles.get(i).getArticleState()==ArticleState.PENDING){
+                pendingArticles.add(allArticles.get(i));
+            }
+            if(allArticles.get(i).getArticleState()==ArticleState.ACCEPTED){
+                acceptedArticles.add(allArticles.get(i));
+            }
+        }
 
         //setPending List
         pendingView = new VBox();
