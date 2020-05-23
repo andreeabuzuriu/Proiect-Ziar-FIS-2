@@ -1,6 +1,7 @@
 package Services;
 
 import Models.ArticleModel;
+import Models.ArticleState;
 import Models.UserModel;
 import View.AlertBox;
 import com.google.gson.Gson;
@@ -32,6 +33,25 @@ public class DatabaseService {
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void changeArticleState(ArticleModel articleModel, ArticleState articleState){
+        ArrayList<ArticleModel> allArticles=getAllArticles();
+        for(int i=0;i<allArticles.size();i++)
+        {
+            if(allArticles.get(i).getKey().equals(articleModel.getKey()))
+                allArticles.get(i).setArticleState(articleState);
+        }
+        try{
+            FileWriter file = new FileWriter(articlesFile);
+            String allArticlesJson=new Gson().toJson(allArticles);
+            file.write(allArticlesJson);
+            file.flush();
+        }
+        catch (Exception e)
+        {
+            System.out.println("Accept failed");
         }
     }
 

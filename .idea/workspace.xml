@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdacdac0-ecd1-4b7a-996f-a9adf4442bcc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/DatabaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/articles.json">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="12" selection-end-column="479" />
+              <caret column="114" selection-start-column="114" selection-end-column="114" />
             </state>
           </provider>
         </entry>
@@ -67,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+            <state relative-caret-position="149">
+              <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Services/DatabaseService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="149">
+              <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,15 +190,16 @@
         <option value="$PROJECT_DIR$/src/main/java/View/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/AddNewArticleView.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/EditArticleView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Services/DatabaseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/FirstPageRedactor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Services/DatabaseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" />
+        <option value="$PROJECT_DIR$/articles.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-67" />
-    <option name="y" value="42" />
+    <option name="x" value="-73" />
+    <option name="y" value="55" />
     <option name="width" value="977" />
     <option name="height" value="691" />
   </component>
@@ -586,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589650943703</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added articles based on ArticleState ZIAR-22">
+      <created>1590233355742</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1590233355742</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -599,10 +608,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-70" y="96" width="977" height="691" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3653217" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -611,13 +620,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49182117" visible="true" weight="0.3775701" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924357" visible="true" weight="0.34353742" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4977307" weight="0.2585034" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.32993197" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50817883" side_tool="true" visible="true" weight="0.3775701" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5075643" side_tool="true" visible="true" weight="0.34353742" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49319214" weight="0.22959183" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4986577" weight="0.21246459" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -691,7 +700,8 @@
     <MESSAGE value="Warning message for accepted articles-ZIAR-29." />
     <MESSAGE value="Added delete button-ZIAR-30." />
     <MESSAGE value="Added delete functionality in JSON-ZIAR-31." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added delete functionality in JSON-ZIAR-31." />
+    <MESSAGE value="Added articles based on ArticleState ZIAR-22" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added articles based on ArticleState ZIAR-22" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -830,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-end-column="479" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -892,8 +895,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Services/DatabaseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="149">
+          <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -902,11 +905,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        <state relative-caret-position="149">
+          <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="114" selection-start-column="114" selection-end-column="114" />
         </state>
       </provider>
     </entry>

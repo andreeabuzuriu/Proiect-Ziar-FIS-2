@@ -172,7 +172,9 @@ public class FirstPageRedactorSef {
 
         acceptButton.setOnAction(e ->
         {
-            System.out.println(article.getNume());
+            //System.out.println(article.getNume());
+            DatabaseService.changeArticleState(article,ArticleState.ACCEPTED);
+
         });
         declineButton.setOnAction(e ->
         {
