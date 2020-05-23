@@ -200,7 +200,8 @@ public class FirstPageRedactorSef {
         });
         declineButton.setOnAction(e ->
         {
-            System.out.println(article.getNume() + " decline");
+            //System.out.println(article.getNume() + " decline");
+            DatabaseService.changeArticleState(article,ArticleState.DECLINED);
         });
 
         actionBox.getChildren().addAll(acceptButton, declineButton);
