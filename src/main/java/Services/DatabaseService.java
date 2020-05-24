@@ -97,6 +97,7 @@ public class DatabaseService {
             {
                 allArticles.get(i).setNume(newArticle.getNume());
                 allArticles.get(i).setContinut(newArticle.getContinut());
+                allArticles.get(i).setArticleState(newArticle.getArticleState());
             }
         }
         try{
