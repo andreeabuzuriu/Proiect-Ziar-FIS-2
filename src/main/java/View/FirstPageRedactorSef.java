@@ -179,8 +179,9 @@ public class FirstPageRedactorSef {
         });
         declineButton.setOnAction(e ->
         {
-            DatabaseService.changeArticleState(article, ArticleState.DECLINED);
-            refreshPendingList();
+            FeedbackView.display();
+            //DatabaseService.changeArticleState(article, ArticleState.DECLINED);
+            //refreshPendingList();
         });
 
         actionBox.getChildren().addAll(acceptButton, declineButton);

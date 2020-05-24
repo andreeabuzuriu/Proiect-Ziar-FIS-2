@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdacdac0-ecd1-4b7a-996f-a9adf4442bcc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/View/FeedbackView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/articles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
+            <state relative-caret-position="229">
               <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -33,25 +34,25 @@
         <entry file="file://$PROJECT_DIR$/users.json">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/articles.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="451" lean-forward="true" selection-start-column="451" selection-end-column="451" />
+              <caret column="51" selection-start-column="51" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/View/EditArticleView.java">
+        <entry file="file://$PROJECT_DIR$/articles.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state>
+              <caret column="452" selection-start-column="452" selection-end-column="452" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/AlertBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="47">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,18 +61,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserModel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/EditArticleView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="206">
+              <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="42" />
               <folding>
-                <element signature="e#320#321#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#522#523#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Models/ArticleState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -79,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state relative-caret-position="-442">
+              <caret line="181" column="34" selection-start-line="181" selection-start-column="33" selection-end-line="181" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,20 +96,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            <state relative-caret-position="153">
+              <caret line="126" column="58" lean-forward="true" selection-start-line="123" selection-end-line="126" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UsersGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="6" lean-forward="true" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -112,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Services/DatabaseService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
+            <state relative-caret-position="221">
+              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/EncryptUtil.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/FeedbackView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state relative-caret-position="183">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,9 +176,10 @@
         <option value="$PROJECT_DIR$/src/main/java/View/AddNewArticleView.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/EditArticleView.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/FirstPageRedactor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" />
         <option value="$PROJECT_DIR$/src/main/java/Services/DatabaseService.java" />
         <option value="$PROJECT_DIR$/articles.json" />
+        <option value="$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/FeedbackView.java" />
       </list>
     </option>
   </component>
@@ -322,7 +319,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589651225570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590316412298" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -619,7 +616,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590234703686</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Changed article state in EditView ZIAR-24">
+      <created>1590315430444</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1590315430445</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -644,13 +648,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49167928" visible="true" weight="0.20238096" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49167928" visible="true" weight="0.21428572" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4977307" weight="0.2585034" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.32993197" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50832075" side_tool="true" visible="true" weight="0.20238096" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50832075" side_tool="true" visible="true" weight="0.21428572" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49319214" weight="0.22959183" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4977307" weight="0.21088435" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -704,7 +708,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adaugare ReadJSONFile" />
     <MESSAGE value="Adaugare Login" />
     <MESSAGE value="Adaugare AlertBox" />
     <MESSAGE value="Am generat userii" />
@@ -729,7 +732,8 @@
     <MESSAGE value="Changed articleState in JSON is accepted/declined ZIAR-24" />
     <MESSAGE value="Added refreshList method for both lists ZIAR-37" />
     <MESSAGE value="Added logic for acceptind/declining articles ZIAR-24" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logic for acceptind/declining articles ZIAR-24" />
+    <MESSAGE value="Changed article state in EditView ZIAR-24" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed article state in EditView ZIAR-24" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -752,16 +756,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/Labeled.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/AlertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -779,13 +773,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/ArticleState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -884,30 +871,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/Login.java">
+    <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+        <state>
+          <caret column="51" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="452" selection-start-column="452" selection-end-column="452" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/ArticleState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Services/DatabaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/AlertBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        <state relative-caret-position="47">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -916,35 +914,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/EditArticleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="206">
+          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Services/DatabaseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
+        <state relative-caret-position="153">
+          <caret line="126" column="58" lean-forward="true" selection-start-line="123" selection-end-line="126" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users.json">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+        <state relative-caret-position="229">
+          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles.json">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/FirstPageRedactorSef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="451" lean-forward="true" selection-start-column="451" selection-end-column="451" />
+        <state relative-caret-position="-442">
+          <caret line="181" column="34" selection-start-line="181" selection-start-column="33" selection-end-line="181" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/FeedbackView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
