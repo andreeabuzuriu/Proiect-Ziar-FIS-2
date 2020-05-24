@@ -98,6 +98,7 @@ public class DatabaseService {
                 allArticles.get(i).setNume(newArticle.getNume());
                 allArticles.get(i).setContinut(newArticle.getContinut());
                 allArticles.get(i).setArticleState(newArticle.getArticleState());
+                allArticles.get(i).setFeedback(newArticle.getFeedback());
             }
         }
         try{
@@ -105,7 +106,7 @@ public class DatabaseService {
             String allArticlesJson=new Gson().toJson(allArticles);
             file.write(allArticlesJson);
             file.flush();
-            AlertBox.display("Notificare","Articolul cu numele "+newArticle.getNume() + " a fost editat!");
+            AlertBox.display("Notificare","Modificarile pentru articlul "+newArticle.getNume() + " au fost salvate!");
         }
         catch (Exception e)
         {

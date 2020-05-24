@@ -42,7 +42,9 @@ public class FirstPageRedactor {
 
     private static void onCreate() {
         //TODO initiez listele cu articole
-        myArticles.addAll(DatabaseService.getUserArticles(CurrentUserName));
+        ArrayList<ArticleModel> articles=DatabaseService.getUserArticles(CurrentUserName);
+        if(articles!=null)
+        {myArticles.addAll(articles);}
 
         //setPending List
         myArticleView = new VBox();
@@ -110,6 +112,7 @@ public class FirstPageRedactor {
 
         Label titleLabel = new Label(article.getAutor() + ":" + article.getNume());
         Label descLabel = new Label(article.getContinut());
+        Label declinedReason=new Label();
 
         String state="Pending";
         if(article.getArticleState().equals(ArticleState.ACCEPTED))
@@ -119,13 +122,20 @@ public class FirstPageRedactor {
         if(article.getArticleState().equals(ArticleState.DECLINED))
         {
             state="Declined";
+
+            declinedReason=new Label("Motiv : "+article.getFeedback());
         }
         Label articleStateLabel=new Label("Article state : "+state);
 
         descLabel.setWrapText(true);
         descLabel.setPrefWidth(500);
         descLabel.setTextAlignment(TextAlignment.JUSTIFY);
-        detailBox.getChildren().addAll(articleStateLabel,titleLabel, descLabel);
+
+        if(article.getArticleState()==ArticleState.DECLINED)
+        { detailBox.getChildren().addAll(articleStateLabel,declinedReason,titleLabel, descLabel);}
+        else{
+            detailBox.getChildren().addAll(articleStateLabel,titleLabel, descLabel);
+        }
 
         HBox actionBox = new HBox();
         actionBox.minWidth(60);

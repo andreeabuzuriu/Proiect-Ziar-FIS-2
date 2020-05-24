@@ -93,7 +93,7 @@ public class FirstPageRedactorSef {
         CurrentLayout.getChildren().addAll(pendingScroll, articlesScroll);
 
     }
-    private static void refreshPendingList(){
+    public static void refreshPendingList(){
         allArticles = DatabaseService.getAllArticles();
         pendingContentView.getChildren().clear();
         pendingArticles.clear();
@@ -179,9 +179,7 @@ public class FirstPageRedactorSef {
         });
         declineButton.setOnAction(e ->
         {
-            FeedbackView.display();
-            //DatabaseService.changeArticleState(article, ArticleState.DECLINED);
-            //refreshPendingList();
+            FeedbackView.display(article);
         });
 
         actionBox.getChildren().addAll(acceptButton, declineButton);
