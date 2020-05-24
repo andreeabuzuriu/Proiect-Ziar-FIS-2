@@ -26,13 +26,14 @@ public class Login extends Application {
 
     TextField usernameTextField = new TextField ();
     PasswordField passwordTextField = new PasswordField ();
+    Stage primaryStage;
     public static void main(String[] args){
         launch(args);
         UsersGenerator.generateUsersList();
 
     }
-    public void start(Stage primaryStage) throws Exception{
-
+    public void start(Stage stage) throws Exception{
+        this.primaryStage=stage;
         primaryStage.setTitle("Login");
 
         Label usernameLabel = new Label("Username:");
@@ -62,7 +63,6 @@ public class Login extends Application {
 
         loginButton.setOnAction(e->
         {loginAction();
-
         });
 
     }
@@ -75,9 +75,11 @@ public class Login extends Application {
         else
         if(userType.equals(UserType.REDACTOR_SEF)){
             FirstPageRedactorSef.display(usernameTextField.getText());
+            primaryStage.close();
         }
         else if(userType.equals(UserType.REDACTOR)){
             FirstPageRedactor.display(usernameTextField.getText());
+            primaryStage.close();
         }
 
     }

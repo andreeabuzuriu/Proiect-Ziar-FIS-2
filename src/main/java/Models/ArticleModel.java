@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class ArticleModel {
 
-    private String autor,nume,continut,key;
+    private String autor,nume,continut,key,feedback;
     private ArticleState articleState;
 
     public ArticleModel(String autor, String nume, String continut, ArticleState articleState) {
@@ -12,7 +12,16 @@ public class ArticleModel {
         this.nume = nume;
         this.continut = continut;
         this.key = UUID.randomUUID().toString();
+        this.feedback="";
         this.articleState = articleState;
+    }
+
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
     }
 
     public String getAutor() {
