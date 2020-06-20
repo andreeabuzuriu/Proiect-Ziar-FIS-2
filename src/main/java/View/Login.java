@@ -2,7 +2,10 @@ package View;
 
 import Exceptions.EmptyPassword;
 import Exceptions.EmptyUsername;
+import Models.ArticleModel;
+import Models.ArticleState;
 import Models.UserType;
+import Services.DatabaseService;
 import Utils.UserUtils;
 import Utils.UsersGenerator;
 import javafx.application.Application;
@@ -16,6 +19,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Objects;
 
 public class Login extends Application {
@@ -60,7 +67,15 @@ public class Login extends Application {
         primaryStage.show();
 
         loginButton.setOnAction(e-> loginAction());
-
+        UsersGenerator.generateUsersList();
+        File f=new File("articles.json");
+        if(!f.exists()) {
+            try {
+                f.createNewFile();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
     }
 
     public static boolean loginAction(){

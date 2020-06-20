@@ -23,7 +23,7 @@ public class DatabaseService {
 
             FileWriter file = new FileWriter(articlesFile);
 
-            if(allArticles==null) {
+            if( allArticles==null || allArticles.isEmpty()) {
 
                 allArticles=new ArrayList<ArticleModel>();
             }
@@ -32,7 +32,7 @@ public class DatabaseService {
             file.write(articleJson);
             file.flush();
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 
@@ -64,7 +64,7 @@ public class DatabaseService {
         }
         catch (Exception e)
         {
-            return null;
+            return  new ArrayList<ArticleModel>();
         }
     }
 
