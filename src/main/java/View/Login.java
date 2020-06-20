@@ -1,5 +1,6 @@
 package View;
 
+import Exceptions.EmptyPassword;
 import Exceptions.EmptyUsername;
 import Models.UserModel;
 import Models.UserType;
@@ -91,6 +92,12 @@ public class Login extends Application {
         if(Objects.equals(username,""))
             throw new EmptyUsername(username);
     }
+
+    public static void checkPassword(String password) throws EmptyPassword{
+        if(Objects.equals(password,""))
+            throw new EmptyPassword(password);
+    }
+
 
 
 

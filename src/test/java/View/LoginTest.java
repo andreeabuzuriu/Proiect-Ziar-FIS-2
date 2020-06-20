@@ -1,6 +1,9 @@
 package View;
+
+import Exceptions.EmptyPassword;
 import Exceptions.EmptyUsername;
 import org.junit.Test;
+
 public class LoginTest {
 
     @Test(expected = EmptyUsername.class)
@@ -8,4 +11,8 @@ public class LoginTest {
         Login.checkUsername("");
     }
 
+    @Test(expected = EmptyPassword.class)
+    public void testCheckEmptyPassword() throws EmptyPassword{
+        Login.checkPassword("");
+    }
 }
