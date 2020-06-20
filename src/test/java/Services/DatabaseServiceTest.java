@@ -4,10 +4,16 @@ import Exceptions.NullArticle;
 import Exceptions.NullArticleFields;
 import Models.ArticleModel;
 import Models.ArticleState;
+import com.google.gson.Gson;
+import org.junit.Assert;
 import org.junit.Test;
 import org.testfx.framework.junit.ApplicationTest;
 
+import java.util.ArrayList;
+
 public class DatabaseServiceTest extends ApplicationTest {
+    private ArticleModel articleModel = new ArticleModel("a", "b", "c", ArticleState.PENDING);
+
     @Test(expected = NullArticle.class)
     public void testCheckNullArticle() throws NullArticle {
         ArticleModel articleModel = null;
@@ -36,6 +42,19 @@ public class DatabaseServiceTest extends ApplicationTest {
     public void testCheckNullArticleStateName() throws NullArticleFields {
         ArticleModel articleModel = new ArticleModel("aaa", "bbb", "ccc", null);
         DatabaseService.checkArticleFields(articleModel);
+    }
+
+    @Test
+    public void testAddArticle() {
+
+        ArrayList<ArticleModel> articles = DatabaseService.getAllArticles();
+        articles.add(articleModel);
+        DatabaseService.addArticle(articleModel);
+        ArrayList<ArticleModel> articles2 = DatabaseService.getAllArticles();
+        Gson gson = new Gson();
+        String articlesJSON = gson.toJson(articles);
+        String articles2JSON = gson.toJson(articles2);
+        Assert.assertEquals(articlesJSON, articles2JSON);
     }
 
 }
