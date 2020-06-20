@@ -1,21 +1,18 @@
 package View;
-import MockData.MockArticles;
+
 import Models.ArticleModel;
 import Models.ArticleState;
 import Services.DatabaseService;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-import org.json.simple.JSONObject;
-
-import java.util.ArrayList;
 
 
 public class EditArticleView {
@@ -35,7 +32,6 @@ public class EditArticleView {
     }
 
     private static void onCreate() {
-        //TODO initiez listele cu articole
         Label titleLabel = new Label("Titlu:");
         TextField titleTextField = new TextField();
         titleTextField.setText(CurrentArticle.getNume());
@@ -49,7 +45,7 @@ public class EditArticleView {
         {
             if(titleTextField.getText().isEmpty() || contentTextArea.getText().isEmpty())
             {
-                AlertBox.display("Warning","Please complete all fields");
+                AlertBox.display("Warning","Va rugam completati toate campurile.");
                 return;
             }
             CurrentArticle.setNume(titleTextField.getText());

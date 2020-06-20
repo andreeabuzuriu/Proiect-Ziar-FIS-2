@@ -34,11 +34,6 @@ public class UsersGenerator {
         Gson gson = new Gson();
         String usersList = gson.toJson(users);
 
-        /*
-        ArrayList<UserModel> users2 = gson1.fromJson(json1, new TypeToken<ArrayList<UserModel>>(){}.getType());
-        for(int i=0;i<users2.size();i++)
-            System.out.println(users2.get(i).username+ " " +users2.get(i).password + " " +users2.get(i).role);
-            */
 
         try (FileWriter file = new FileWriter("users.json")) {
             file.write(usersList);

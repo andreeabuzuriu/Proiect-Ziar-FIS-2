@@ -1,17 +1,18 @@
 package View;
-import MockData.MockArticles;
+
 import Models.ArticleModel;
 import Models.ArticleState;
 import Services.DatabaseService;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-
 
 public class AddNewArticleView {
     private static VBox CurrentLayout;
@@ -25,12 +26,11 @@ public class AddNewArticleView {
         Scene scene = new Scene(CurrentLayout, 400, 400);
         window.setScene(scene);
         window.show();
-
         onCreate();
     }
 
     private static void onCreate() {
-        //TODO initiez listele cu articole
+
         Label titleLabel = new Label("Titlu:");
         TextField titleTextField = new TextField();
         Label contentLabel = new Label("Continut:");
