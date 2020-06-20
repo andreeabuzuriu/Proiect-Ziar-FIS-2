@@ -295,7 +295,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592649314552" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592649480303" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -320,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTest">
+  <component name="RunManager" selected="JUnit.EncryptUtilTest">
     <configuration name="CreateJSONFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CreateJSONFile" />
       <module name="ProiectZiarFIS" />
@@ -338,6 +338,21 @@
     <configuration name="ReadJSONFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ReadJSONFile" />
       <module name="ProiectZiarFIS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EncryptUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maven-fis-ziar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Utils" />
+      <option name="MAIN_CLASS_NAME" value="Utils.EncryptUtilTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -406,11 +421,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EncryptUtilTest" />
         <item itemvalue="JUnit.LoginTest" />
         <item itemvalue="Application.Login" />
         <item itemvalue="Application.ReadJSONFile" />
         <item itemvalue="Application.CreateJSONFile" />
-        <item itemvalue="Application.ReadJSONFile" />
       </list>
     </recent_temporary>
   </component>
