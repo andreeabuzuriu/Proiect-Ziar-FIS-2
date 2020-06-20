@@ -1,5 +1,6 @@
 package View;
 
+import Exceptions.EmptyUsername;
 import Models.UserModel;
 import Models.UserType;
 import Utils.EncryptUtil;
@@ -21,6 +22,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Login extends Application {
 
@@ -82,6 +84,12 @@ public class Login extends Application {
             primaryStage.close();
         }
 
+    }
+
+
+    public static void checkUsername(String username) throws EmptyUsername{
+        if(Objects.equals(username,""))
+            throw new EmptyUsername(username);
     }
 
 
