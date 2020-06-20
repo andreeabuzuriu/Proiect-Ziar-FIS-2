@@ -16,4 +16,16 @@ public class EncryptUtilTest extends ApplicationTest {
             areEquals=false;
         Assert.assertEquals(false,areEquals);
     }
+
+    @Test
+    public void testDecrypt()
+    {
+        String cryptedPassword="1PnM2h/rtOd9iz0/A/nZBw==";
+        String decrypted = EncryptUtil.decrypt(cryptedPassword);
+        boolean areEquals = true;
+        if(!cryptedPassword.equals(decrypted))
+            areEquals=false;
+        Assert.assertEquals(false,areEquals);
+    }
+
 }
