@@ -1,5 +1,7 @@
 package View;
 
+import Exceptions.EmptyPassword;
+import Exceptions.EmptyUsername;
 import Models.UserModel;
 import Models.UserType;
 import Utils.EncryptUtil;
@@ -21,12 +23,15 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Login extends Application {
 
-    TextField usernameTextField = new TextField ();
-    PasswordField passwordTextField = new PasswordField ();
-    Stage primaryStage;
+    static TextField usernameTextField = new TextField ();
+    static PasswordField passwordTextField = new PasswordField ();
+    static boolean isTesting=false;
+    private static Stage primaryStage;
+
     public static void main(String[] args){
         launch(args);
         UsersGenerator.generateUsersList();
@@ -67,22 +72,51 @@ public class Login extends Application {
 
     }
 
-    public void loginAction(){
+    public static boolean loginAction(){
         UserType userType = UserUtils.isUserValid(usernameTextField.getText(),passwordTextField.getText());
 
-        if(userType==null)
-            AlertBox.display("Eroare","Username sau parola gresita");
+        if(userType==null) {
+            if(isTesting)
+            {new Runnable(){
+
+                @Override
+                public void run() {
+                    AlertBox.display("Eroare", "Username sau parola gresita");
+                }
+            };}
+            else
+            {
+                AlertBox.display("Eroare", "Username sau parola gresita");
+
+            }
+            return false;
+        }
         else
         if(userType.equals(UserType.REDACTOR_SEF)){
             FirstPageRedactorSef.display(usernameTextField.getText());
             primaryStage.close();
+            return true;
         }
         else if(userType.equals(UserType.REDACTOR)){
             FirstPageRedactor.display(usernameTextField.getText());
             primaryStage.close();
+            return true;
         }
-
+        return false;
     }
+
+
+
+    public static void checkUsername(String username) throws EmptyUsername{
+        if(Objects.equals(username,""))
+            throw new EmptyUsername(username);
+    }
+
+    public static void checkPassword(String password) throws EmptyPassword{
+        if(Objects.equals(password,""))
+            throw new EmptyPassword(password);
+    }
+
 
 
 
