@@ -15,4 +15,14 @@ public class LoginTest {
     public void testCheckEmptyPassword() throws EmptyPassword{
         Login.checkPassword("");
     }
+
+    @Test
+    public void testCheckUsernameNotEmpty() throws EmptyUsername {
+        Login.checkUsername("andrei");
+    }
+
+    @Test
+    public void testCheckPasswordNotEmpty() throws EmptyPassword{
+        Login.checkPassword("parola");
+    }
 }
