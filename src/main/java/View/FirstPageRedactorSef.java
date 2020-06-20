@@ -1,6 +1,5 @@
 package View;
 
-import MockData.MockArticles;
 import Models.ArticleModel;
 import Models.ArticleState;
 import Services.DatabaseService;

@@ -1,8 +1,6 @@
 package Utils;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 
-import java.util.*;
-
 public class EncryptUtil
 {
     private static String pass="myPass";

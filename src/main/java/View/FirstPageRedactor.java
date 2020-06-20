@@ -1,6 +1,5 @@
 package View;
 
-import MockData.MockArticles;
 import Models.ArticleModel;
 import Models.ArticleState;
 import Services.DatabaseService;
@@ -8,16 +7,12 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 
 public class FirstPageRedactor {
@@ -41,12 +36,12 @@ public class FirstPageRedactor {
     }
 
     private static void onCreate() {
-        //TODO initiez listele cu articole
         ArrayList<ArticleModel> articles=DatabaseService.getUserArticles(CurrentUserName);
         if(articles!=null)
-        {myArticles.addAll(articles);}
+        {
+            myArticles.addAll(articles);
+        }
 
-        //setPending List
         myArticleView = new VBox();
         myArticleView.setSpacing(10);
 
@@ -61,16 +56,14 @@ public class FirstPageRedactor {
         Button addButton = new Button("Add");
         Button refreshButton = new Button("Refresh");
 
-        refreshButton.setOnAction(e->
-        {
-            refreshList();
-        });
+        refreshButton.setOnAction(e-> refreshList());
+
         HBox buttonsHBox = new HBox();
         buttonsHBox.getChildren().addAll(addButton,refreshButton);
         addButton.setAlignment(Pos.CENTER);
         addButton.setOnAction(e-> AddNewArticleView.display(CurrentUserName));
 
-        Label articleViewTitle = new Label("My articles list");
+        Label articleViewTitle = new Label("Articolele mele");
         articleViewTitle.setAlignment(Pos.CENTER);
 
         myArticleView.setAlignment(Pos.CENTER);
@@ -125,7 +118,7 @@ public class FirstPageRedactor {
 
             declinedReason=new Label("Motiv : "+article.getFeedback());
         }
-        Label articleStateLabel=new Label("Article state : "+state);
+        Label articleStateLabel=new Label("Stare : "+state);
 
         descLabel.setWrapText(true);
         descLabel.setPrefWidth(500);

@@ -4,12 +4,13 @@ import Exceptions.NullArticle;
 import Exceptions.NullArticleFields;
 import Models.ArticleModel;
 import Models.ArticleState;
-import Models.UserModel;
 import View.AlertBox;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.*;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -17,8 +18,6 @@ public class DatabaseService {
     private static String articlesFile="articles.json";
 
     public static void addArticle(ArticleModel article){
-
-
         try  {
             ArrayList<ArticleModel>
                     allArticles= getAllArticles();
@@ -33,7 +32,6 @@ public class DatabaseService {
             String articleJson=new Gson().toJson(allArticles);
             file.write(articleJson);
             file.flush();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -60,7 +58,6 @@ public class DatabaseService {
 
     public static ArrayList<ArticleModel> getAllArticles(){
         Gson gson = new Gson();
-
         try{
             FileReader reader = new FileReader(articlesFile);
             ArrayList<ArticleModel> allArticles = gson.fromJson(reader,new TypeToken<ArrayList<ArticleModel>>() {}.getType());
@@ -119,6 +116,7 @@ public class DatabaseService {
     }
     public static void deleteArticle(ArticleModel articleToDelete){
         ArrayList<ArticleModel> allArticles=getAllArticles();
+
         for(int i=0;i<allArticles.size();i++)
         {
             if(allArticles.get(i).getKey().equals(articleToDelete.getKey()))
@@ -151,8 +149,7 @@ public class DatabaseService {
                 || articleModel.getContinut().isEmpty()
                 || articleModel.getAutor().isEmpty()
                 || articleModel.getKey().isEmpty()
-                || articleModel.getArticleState()==null
-        )
+                || articleModel.getArticleState()==null)
         {
             throw new NullArticleFields();
         }
