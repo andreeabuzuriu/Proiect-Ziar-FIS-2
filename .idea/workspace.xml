@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdacdac0-ecd1-4b7a-996f-a9adf4442bcc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/View/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/View/LoginTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,10 +19,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="-1140">
+              <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2553#2554#0" expanded="true" />
+                <element signature="e#2650#2651#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/View/LoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="251">
+              <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,9 +202,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="312" />
-    <option name="width" value="977" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="539" />
+    <option name="width" value="981" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -292,7 +295,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592649111657" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592649314552" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -653,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592649067786</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Added checkUsername and checkPassword not null">
+      <created>1592649152843</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1592649152843</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -661,6 +671,9 @@
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LoginTest - 2020.06.20 at 13h 30m 40s.xml">
+      <configuration name="LoginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LoginTest - 2020.06.20 at 13h 31m 54s.xml">
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -674,10 +687,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="312" y="0" width="977" height="735" extended-state="0" />
+    <frame x="-98" y="0" width="977" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38713196" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38713196" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -686,13 +699,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48964012" visible="true" weight="0.18998273" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48964012" visible="true" weight="0.3074266" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4977307" weight="0.2585034" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.32993197" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5103599" side_tool="true" visible="true" weight="0.18998273" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5103599" side_tool="true" visible="true" weight="0.3074266" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49319214" weight="0.22959183" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4977307" weight="0.21088435" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -746,7 +759,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Pending List with fake data ZIAR-23 - small changes" />
     <MESSAGE value="Created Accepted List with fake data ZIAR-23" />
     <MESSAGE value="First page redactor." />
     <MESSAGE value="Added new article view ZIAR-32." />
@@ -771,7 +783,8 @@
     <MESSAGE value="Added checkUsername" />
     <MESSAGE value="Added checkUsernameTest" />
     <MESSAGE value="Added checkPasswordTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added checkPasswordTest" />
+    <MESSAGE value="Added checkUsername and checkPassword not null" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added checkUsername and checkPassword not null" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -990,18 +1003,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="-1140">
+          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2553#2554#0" expanded="true" />
+            <element signature="e#2650#2651#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/View/LoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="251">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

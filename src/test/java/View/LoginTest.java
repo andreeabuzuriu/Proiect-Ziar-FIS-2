@@ -2,10 +2,12 @@ package View;
 
 import Exceptions.EmptyPassword;
 import Exceptions.EmptyUsername;
+import org.junit.Assert;
 import org.junit.Test;
+import org.testfx.framework.junit.ApplicationTest;
 
-public class LoginTest {
-
+public class LoginTest extends ApplicationTest{
+    private static String username,password;
     @Test(expected = EmptyUsername.class)
     public void testCheckEmptyUsername() throws EmptyUsername{
         Login.checkUsername("");
@@ -24,5 +26,17 @@ public class LoginTest {
     @Test
     public void testCheckPasswordNotEmpty() throws EmptyPassword{
         Login.checkPassword("parola");
+    }
+
+    @Test
+    public void testLoginAction(){
+        username="jjj";
+        password="jjj";
+        Login.usernameTextField.setText(username);
+        Login.passwordTextField.setText(password);
+        Login.isTesting=true;
+        boolean result = Login.loginAction();
+        Login.isTesting=false;
+        Assert.assertEquals(false,result);
     }
 }
