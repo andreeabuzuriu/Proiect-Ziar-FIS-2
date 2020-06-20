@@ -90,4 +90,30 @@ public class DatabaseServiceTest extends ApplicationTest {
         String articles2JSON = gson.toJson(articles2);
         Assert.assertEquals(articlesJSON, articles2JSON);
     }
+
+    @Test
+    public void testGetAllArticles() {
+        ArrayList<ArticleModel> articles = DatabaseService.getAllArticles();
+        articles.add(articleModel);
+        DatabaseService.addArticle(articleModel);
+        ArrayList<ArticleModel> articles2 = DatabaseService.getAllArticles();
+        Gson gson = new Gson();
+        String articlesJSON = gson.toJson(articles);
+        String articles2JSON = gson.toJson(articles2);
+        Assert.assertEquals(articlesJSON,articles2JSON);
+    }
+
+    @Test
+    public void testGetUserArticles(){
+
+        ArrayList<ArticleModel> articles = DatabaseService.getUserArticles("adi");
+        articles.add(articleModel);
+        articleModel.setAutor("adi");
+        DatabaseService.addArticle(articleModel);
+        ArrayList<ArticleModel> articles2 = DatabaseService.getUserArticles("adi");
+        Gson gson = new Gson();
+        String articlesJSON = gson.toJson(articles);
+        String articles2JSON = gson.toJson(articles2);
+        Assert.assertEquals(articlesJSON, articles2JSON);
+    }
 }
