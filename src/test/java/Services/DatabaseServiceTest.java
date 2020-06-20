@@ -79,4 +79,15 @@ public class DatabaseServiceTest extends ApplicationTest {
         Assert.assertEquals(articlesJSON, articles2JSON);
     }
 
+    @Test
+    public void testDeleteUserArticle(){
+        ArrayList<ArticleModel> articles = DatabaseService.getAllArticles();
+        articles.remove(articleModel);
+        DatabaseService.deleteArticle(articleModel);
+        ArrayList<ArticleModel> articles2 = DatabaseService.getAllArticles();
+        Gson gson = new Gson();
+        String articlesJSON = gson.toJson(articles);
+        String articles2JSON = gson.toJson(articles2);
+        Assert.assertEquals(articlesJSON, articles2JSON);
+    }
 }

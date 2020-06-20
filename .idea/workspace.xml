@@ -302,7 +302,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592651662388" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592651772028" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -770,12 +770,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest - 2020.06.20 at 13h 30m 40s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTest - 2020.06.20 at 13h 31m 54s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LoginTest - 2020.06.20 at 13h 35m 20s.xml">
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
@@ -798,6 +792,12 @@
       <configuration name="DatabaseServiceTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DatabaseServiceTest - 2020.06.20 at 14h 07m 51s.xml">
+      <configuration name="DatabaseServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DatabaseServiceTest - 2020.06.20 at 14h 11m 42s.xml">
+      <configuration name="DatabaseServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DatabaseServiceTest - 2020.06.20 at 14h 14m 27s.xml">
       <configuration name="DatabaseServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
