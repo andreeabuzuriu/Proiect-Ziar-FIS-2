@@ -2,27 +2,20 @@ package View;
 
 import Exceptions.EmptyPassword;
 import Exceptions.EmptyUsername;
-import Models.UserModel;
 import Models.UserType;
-import Utils.EncryptUtil;
 import Utils.UserUtils;
 import Utils.UsersGenerator;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import javafx.application.Application;
-import javafx.beans.binding.ObjectExpression;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Login extends Application {
@@ -66,9 +59,7 @@ public class Login extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        loginButton.setOnAction(e->
-        {loginAction();
-        });
+        loginButton.setOnAction(e-> loginAction());
 
     }
 

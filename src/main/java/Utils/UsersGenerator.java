@@ -3,13 +3,6 @@ package Utils;
 import Models.UserModel;
 import Models.UserType;
 import com.google.gson.Gson;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -34,7 +27,6 @@ public class UsersGenerator {
         Gson gson = new Gson();
         String usersList = gson.toJson(users);
 
-
         try (FileWriter file = new FileWriter("users.json")) {
             file.write(usersList);
             file.flush();
@@ -42,6 +34,5 @@ public class UsersGenerator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

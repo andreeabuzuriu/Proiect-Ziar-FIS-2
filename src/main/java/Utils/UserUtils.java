@@ -4,13 +4,6 @@ import Models.UserModel;
 import Models.UserType;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import javax.jws.soap.SOAPBinding;
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,13 +13,12 @@ public class UserUtils {
     public static UserType isUserValid(String username, String password) {
         ArrayList<UserModel> usersList = readUsersFile();
         for(int i=0;i<usersList.size();i++){
-            String cryptedPassword=EncryptUtil.decrypt(usersList.get(i).getPassword());
+            String cryptedPassword = EncryptUtil.decrypt(usersList.get(i).getPassword());
             if((usersList.get(i).getUsername().equals(username)) && cryptedPassword.equals(password))
                 return usersList.get(i).getRole();
         }
         return null;
     }
-
 
     private static ArrayList<UserModel> readUsersFile() {
 
@@ -46,5 +38,4 @@ public class UserUtils {
             return null;
         }
     }
-
 }

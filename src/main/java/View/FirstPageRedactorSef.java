@@ -10,12 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
 
 
@@ -176,10 +173,7 @@ public class FirstPageRedactorSef {
             refreshAcceptedList();
 
         });
-        declineButton.setOnAction(e ->
-        {
-            FeedbackView.display(article);
-        });
+        declineButton.setOnAction(e -> FeedbackView.display(article));
 
         actionBox.getChildren().addAll(acceptButton, declineButton);
         actionBox.setAlignment(Pos.CENTER);
@@ -194,7 +188,6 @@ public class FirstPageRedactorSef {
             acceptedContentView.getChildren().add(createAcceptedCell(acceptedArticles.get(i)));
         }
     }
-
 
     private static VBox createAcceptedCell(ArticleModel article){
         String cssLayout = "-fx-border-color: black;\n" +
@@ -221,9 +214,5 @@ public class FirstPageRedactorSef {
         cellParent.getChildren().add(detailBox);
         return cellParent;
     }
-
-
-
-
 
 }
