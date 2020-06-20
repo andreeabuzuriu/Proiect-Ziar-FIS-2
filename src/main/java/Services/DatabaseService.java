@@ -1,5 +1,6 @@
 package Services;
 
+import Exceptions.NullArticle;
 import Models.ArticleModel;
 import Models.ArticleState;
 import Models.UserModel;
@@ -9,6 +10,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class DatabaseService {
     private static String articlesFile="articles.json";
@@ -135,6 +137,12 @@ public class DatabaseService {
         {
             System.out.println("Delete failed");
         }
+    }
+
+    //tests section
+    public static void checkArticle(ArticleModel articleModel) throws NullArticle {
+        if(Objects.isNull(articleModel))
+            throw new NullArticle();
     }
 
 }
