@@ -1,6 +1,7 @@
 package Services;
 
 import Exceptions.NullArticle;
+import Exceptions.NullArticleFields;
 import Models.ArticleModel;
 import Models.ArticleState;
 import Models.UserModel;
@@ -145,4 +146,15 @@ public class DatabaseService {
             throw new NullArticle();
     }
 
+    public static void checkArticleFields(ArticleModel articleModel) throws NullArticleFields {
+        if(articleModel.getNume().isEmpty()
+                || articleModel.getContinut().isEmpty()
+                || articleModel.getAutor().isEmpty()
+                || articleModel.getKey().isEmpty()
+                || articleModel.getArticleState()==null
+        )
+        {
+            throw new NullArticleFields();
+        }
+    }
 }
