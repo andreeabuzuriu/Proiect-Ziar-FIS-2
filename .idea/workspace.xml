@@ -92,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/Services/DatabaseServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+              <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -302,7 +302,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592651496152" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592651662388" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -759,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592651319541</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Testing testAddArticle">
+      <created>1592651583668</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1592651583668</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -876,7 +883,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added save edit in JSON-ZIAR-28." />
     <MESSAGE value="Warning message for accepted articles-ZIAR-29." />
     <MESSAGE value="Added delete button-ZIAR-30." />
     <MESSAGE value="Added delete functionality in JSON-ZIAR-31." />
@@ -901,7 +907,8 @@
     <MESSAGE value="Added testReadUsersFile (or with null) - finished UserUtils testing" />
     <MESSAGE value="Added DatabaseServiceTest" />
     <MESSAGE value="Testing NullArticleFields" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing NullArticleFields" />
+    <MESSAGE value="Testing testAddArticle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing testAddArticle" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -1178,7 +1185,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/Services/DatabaseServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

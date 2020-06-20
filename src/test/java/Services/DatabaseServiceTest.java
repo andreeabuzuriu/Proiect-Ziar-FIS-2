@@ -57,4 +57,26 @@ public class DatabaseServiceTest extends ApplicationTest {
         Assert.assertEquals(articlesJSON, articles2JSON);
     }
 
+    @Test
+    public void testEditUserArticle(){
+        ArrayList<ArticleModel> articles = DatabaseService.getUserArticles("adi");
+        articleModel.setAutor("adi");
+        articles.add(articleModel);
+        DatabaseService.addArticle(articleModel);
+        articleModel.setContinut("nou");
+        DatabaseService.editArticle(articleModel);
+
+        for(int i=0;i<articles.size();i++)
+            if(articleModel.getKey().equals(articles.get(i).getKey()))
+            {
+                articleModel.setContinut("nou");
+            }
+
+        ArrayList<ArticleModel> articles2 = DatabaseService.getUserArticles("adi");
+        Gson gson = new Gson();
+        String articlesJSON = gson.toJson(articles);
+        String articles2JSON = gson.toJson(articles2);
+        Assert.assertEquals(articlesJSON, articles2JSON);
+    }
+
 }
