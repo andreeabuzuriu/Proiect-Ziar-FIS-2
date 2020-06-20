@@ -39,12 +39,14 @@ public class FirstPageRedactorSef {
     private static void onCreate() {
 
         allArticles = DatabaseService.getAllArticles();
-        for (int i=0;i<allArticles.size();i++){
-            if(allArticles.get(i).getArticleState()==ArticleState.PENDING){
-                pendingArticles.add(allArticles.get(i));
-            }
-            if(allArticles.get(i).getArticleState()==ArticleState.ACCEPTED){
-                acceptedArticles.add(allArticles.get(i));
+        if(allArticles!=null) {
+            for (int i = 0; i < allArticles.size(); i++) {
+                if (allArticles.get(i).getArticleState() == ArticleState.PENDING) {
+                    pendingArticles.add(allArticles.get(i));
+                }
+                if (allArticles.get(i).getArticleState() == ArticleState.ACCEPTED) {
+                    acceptedArticles.add(allArticles.get(i));
+                }
             }
         }
 
@@ -93,7 +95,7 @@ public class FirstPageRedactorSef {
         allArticles = DatabaseService.getAllArticles();
         pendingContentView.getChildren().clear();
         pendingArticles.clear();
-
+        if(allArticles!=null)
         for (int i=0;i<allArticles.size();i++){
             if(allArticles.get(i).getArticleState()==ArticleState.PENDING) {
                 pendingArticles.add(allArticles.get(i));
